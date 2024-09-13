@@ -1,0 +1,46 @@
+{
+  "name": "vanillakit-express",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fe:dev": "webpack serve --mode development --config webpack.dev.js",
+    "fe:build": "webpack --mode production --config webpack.prod.js",
+    "be:build": "node app.js",
+    "be:dev": "nodemon app.js",
+    "start": "concurrently --kill-others \"npm run be:dev\" \"npm run fe:dev\""
+  },
+  "keywords": [],
+  "author": "Muhammad Hanzla",
+  "license": "MIT",
+  "description": "A Webpack and Express boilerplate for dynamic HTML rendering with Pug templating and SCSS.",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/plugin-transform-runtime": "^7.25.4",
+    "@babel/preset-env": "^7.25.4",
+    "autoprefixer": "^10.4.20",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "cssnano": "^7.0.6",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "postcss": "^8.4.45",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.78.0",
+    "sass-loader": "^16.0.1",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0",
+    "webpack-glsl-loader": "^1.0.1",
+    "webpack-manifest-plugin": "^5.0.0",
+    "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "concurrently": "^9.0.1",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.4",
+    "pug": "^3.0.3"
+  }
+}
